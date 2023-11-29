@@ -14,34 +14,34 @@ import bg4 from "public/images/bg/bg4.jpg";
 const BlogData = [
   {
     image: bg1,
-    title: "This is simple blog",
-    subtitle: "2 comments, 1 Like",
+    title: "Home Gardening",
+    subtitle: "Subtitle",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "Description line.",
     btnbg: "primary",
   },
   {
     image: bg2,
-    title: "Lets be simple blog",
-    subtitle: "2 comments, 1 Like",
+    title: "Seasonal Produce",
+    subtitle: "Subtitle",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "Description line.",
     btnbg: "primary",
   },
   {
     image: bg3,
-    title: "Don't Lamp blog",
-    subtitle: "2 comments, 1 Like",
+    title: "Alternative Protein",
+    subtitle: "Subtitle",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "Description line.",
     btnbg: "primary",
   },
   {
     image: bg4,
-    title: "Simple is beautiful",
-    subtitle: "2 comments, 1 Like",
+    title: "Pesticides and anti-monoculture",
+    subtitle: "Subtitle",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
+      "Description line.",
     btnbg: "primary",
   },
 ];
