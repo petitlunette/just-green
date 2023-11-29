@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import Plotly from 'plotly.js-dist';
 import { Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
+import dynamic from "next/dynamic";
 
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import ganttData from 'seasonal_produce.json'; 
 
 const GanttChart = () => {
