@@ -1,7 +1,6 @@
 'use client'
 import Head from "next/head";
 import { Col, Row } from "reactstrap";
-import GanttChart from "@/app/(DashboardLayout)/components/dashboard/SalesChart";
 import Feeds from "@/app/(DashboardLayout)/components/dashboard/Feeds";
 import ProjectTables from "@/app/(DashboardLayout)/components/dashboard/ProjectTable";
 import TopCards from "@/app/(DashboardLayout)/components/dashboard/TopCards";
