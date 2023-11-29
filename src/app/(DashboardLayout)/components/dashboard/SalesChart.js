@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Plotly from 'plotly.js-dist';
 import { Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
-// Replace this with your Gantt chart data import
 import ganttData from 'C:\Users\Luna-Vincent\ppractice\seasonal_produce.json'; 
 
 const GanttChart = () => {
