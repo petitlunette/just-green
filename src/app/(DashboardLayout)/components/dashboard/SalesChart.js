@@ -1,67 +1,40 @@
-import { Card, CardBody, CardSubtitle, CardTitle } from "reactstrap";
-import dynamic from "next/dynamic";
+import React, { useEffect } from 'react';
+import Plotly from 'plotly.js-dist';
+import { Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
-const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
+// Replace this with your Gantt chart data import
+import ganttData from 'C:\Users\Luna-Vincent\ppractice\seasonal_produce.json'; 
 
-const SalesChart = () => {
-  const chartoptions = {
-    series: [
-      {
-        name: "Iphone 13",
-        data: [0, 31, 40, 28, 51, 42, 109, 100],
-      },
-      {
-        name: "Oneplue 9",
-        data: [0, 11, 32, 45, 32, 34, 52, 41],
-      },
-    ],
-    options: {
-      chart: {
-        type: "area",
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      grid: {
-        strokeDashArray: 3,
-        borderColor: "rgba(0,0,0,0.1)",
-      },
+const GanttChart = () => {
+  useEffect(() => {
+    const processData = ganttData.map(item => {
+      return {
+        x: [item.Start, item.Finish],
+        y: [item.Task],
+        type: 'bar',
+        orientation: 'h',
+        // additional configuration if needed
+      };
+    });
 
-      stroke: {
-        curve: "smooth",
-        width: 1,
-      },
-      xaxis: {
-        categories: [
-          "Jan",
-          "Feb",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "Aug",
-        ],
-      },
-    },
-  };
+    const layout = {
+      // layout configuration
+    };
+
+    Plotly.newPlot('ganttChart', processData, layout);
+  }, []);
+
   return (
     <Card>
       <CardBody>
-        <CardTitle tag="h5">Sales Summary</CardTitle>
+        <CardTitle tag="h5">Gantt Chart</CardTitle>
         <CardSubtitle className="text-muted" tag="h6">
-          Yearly Sales Report
+          Seasonal Produce Schedule
         </CardSubtitle>
-        <Chart
-          type="area"
-          width="100%"
-          height="390"
-          options={chartoptions.options}
-          series={chartoptions.series}
-        />
+        <div id="ganttChart" style={{ width: '100%', height: '390px' }} />
       </CardBody>
     </Card>
   );
 };
 
-export default SalesChart;
+export default GanttChart;
