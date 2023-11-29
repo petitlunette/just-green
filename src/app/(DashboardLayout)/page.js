@@ -1,6 +1,11 @@
 'use client'
+'use client'
 import Head from "next/head";
 import { Col, Row } from "reactstrap";
+import GanttChart from "@/app/(DashboardLayout)/components/dashboard/SalesChart";
+import Feeds from "@/app/(DashboardLayout)/components/dashboard/Feeds";
+import ProjectTables from "@/app/(DashboardLayout)/components/dashboard/ProjectTable";
+import TopCards from "@/app/(DashboardLayout)/components/dashboard/TopCards";
 import Blog from "@/app/(DashboardLayout)/components/dashboard/Blog";
 import bg1 from "public/images/bg/bg1.jpg";
 import bg2 from "public/images/bg/bg2.jpg";
@@ -93,7 +98,7 @@ export default function Home() {
         {/***Sales & Feed***/}
         <Row>
           <Col sm="12" lg="6" xl="7" xxl="8">
-            <SalesChart />
+            <GanttChart />
           </Col>
           <Col sm="12" lg="6" xl="5" xxl="4">
             <Feeds />
